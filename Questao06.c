@@ -1,7 +1,8 @@
 /* 
-    Função : 
+    Função : Cálculo 4 tipos diferentes de  media
     Autor :  João Pedro Fontes Ferreira
     Data :  28/03/2023
+    Turma : Estruturas de dados 1 - Quinta-feira noite.
     Observações:  
 */
 

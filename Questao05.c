@@ -1,7 +1,8 @@
 /* 
-    Função : 
+    Função : Cálculo de cubo da soma de dois termos
     Autor :  João Pedro Fontes Ferreira
     Data :  28/03/2023
+    Turma : Estruturas de dados 1 - Quinta-feira noite.
     Observações:  
 */
 
