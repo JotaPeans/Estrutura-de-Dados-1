@@ -20,15 +20,13 @@ void inputInt(int *num, char* message) {
 }
 
 int main() {
-    int i, j, maior, menor, quantidade_menor = 0, numeros[100], soma_numeros = 0;
+    int i, maior, menor, qtd_menor_media = 0, numeros[100], soma_numeros = 0;
     float media;
-    
-    int* numeros_menor_media = malloc(sizeof(int));
     
     srand(time(NULL));
 
     for(i = 0; i < 100; i++) {
-        numeros[i] = (rand() % 100);
+        numeros[i] = (rand() % 700 + 1);
         soma_numeros += numeros[i];
     }
 
@@ -46,30 +44,21 @@ int main() {
         }
 
         if(numeros[i] < media) {
-            quantidade_menor++;
-            numeros_menor_media = realloc(numeros_menor_media, quantidade_menor * sizeof(int));
+            qtd_menor_media++;
         }
 
-        //printf("Array => %d\n", numeros[i]);
-    }
-
-    for(i = 0; i < quantidade_menor; i++) {
-        for(j = 0; j < 100; j++) {
-            if(numeros[j] < media) {
-                if(numeros[j] != numeros[j - 1]) {
-                    numeros_menor_media[i] = numeros[j];
-                    break;
-                }
-            }
-        }
     }
 
     printf("\n\nMedia: %2.f\n", media);
     printf("Maior: %d\n", maior);
-    printf("Menor: %d\n\n", menor);
+    printf("Menor: %d\n", menor);
+    printf("Quantidade de valores menor que a media: %d\n", qtd_menor_media);
+    printf("Numeros menores que a media: \n");
 
-    for(i = 0; i < quantidade_menor; i++) {
-        printf("Menor que media => %d\n", numeros_menor_media[i]);
+    for(i = 0; i < 100; i++) {
+        if(numeros[i] < media) {
+            printf("%d\n", numeros[i]);
+        }
     }
 
     return 1;
